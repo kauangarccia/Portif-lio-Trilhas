@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+.cabecalho {
+  padding: 2% 0 0 35%;
+}
+
+.hamburguer {
+  border: none;
+  background: none;
+  border-top: 3px solid white;
+  cursor: pointer;
+}
+.hamburguer::before,
+.hamburguer::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin-top: 5px;
+}
+
+
+.cabecalho__menu__link{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 20px;
+  color: #00BFFF;
+  text-decoration: none;
+}
+.cabecalho__menu__link1 {
+  text-decoration: underline dodgerblue;
+  text-underline-offset: 10px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 20px;
+  color: #00BFFF;
+}
+.cabecalho__menu__link2 {
+  text-decoration: underline dodgerblue;
+  text-underline-offset: 10px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 20px;
+  color: #00BFFF;
+}
+.cabecalho__menu__link3 {
+  text-decoration: underline dodgerblue;
+  text-underline-offset: 10px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 20px;
+  color: #00BFFF;
+}
+
+button {
+  border: 2px solid dodgerblue;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: #f6f6f6;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  font-size: 1.25rem;
+  border-radius: 3%;
+  width: 50%;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+button:hover {
+  background-color: dodgerblue;
+}
+
+button img {
+  width: 50%;
+  height: auto;
+}
+
+
+.nome-destaque {
+  color: dodgerblue;
+}
+
+.apresentacao {
+  padding: 5% 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 82px;
+}
+
+.apresentacao__conteudo {
+  width: 548px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.titulo-principal{
+  font-size: 36px;
+  font-family: "Krona One", sans-serif;
+}
+
+#nome-autor::after{
+  content: "|";
+  animation: piscar 0.90s infinite;
+}
+@keyframes piscar{
+  0%{
+    opacity: 0;
+  }
+
+  50%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+  }
+}
+
+.apresentacao__conteudo__titulo {
+  font-size: 36px;
+  font-family: "Krona One", sans-serif;
+}
+
+.apresentacao__conteudo__subtitulo {
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+}
+.apresentacao__conteudo__subtitulo0 {
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+}
+
+.apresentacao__conteudo__subtitulo1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+}
+
+
+.apresentacao__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.apresentacao__links__subtitulos {
+  font-size: 20px;
+  font-family: "Krona One", sans-serif;
+}
+
+.apresentacao__links__link {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  border: 2px solid #1E90FF;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 24px;
+  padding: 8px 0;
+  text-decoration: none;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.apresentacao__links__link:hover {
+  background-color: #2F4F4F;
+}
+
+.rodape {
+  border-top: 1px solid dodgerblue;
+  padding: 24px;
+  color: white;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 750px) {
+  .hamburguer{
+    display: block;
+  }
+  .cabecalho {
+    padding: 5%;
+  }
+
+  .cabecalho__menu__link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: blue;
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+  }
+  .cabecalho.active cabecalho__menu {
+    clip-path: circle(1500px at 90% -15%)
+  }
+  }
+  .apresentacao {
+    flex-direction: column-reverse;
+    padding: 5%;
+  
+  .apresentacao__conteudo{
+    width: auto;
+  }
+}
